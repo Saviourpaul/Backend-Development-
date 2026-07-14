@@ -1,1 +1,1 @@
- export const DB_NAME = "saviourpaul24_db_user";
+ export const DB_NAME = "saviourpaul24_db_user"; 

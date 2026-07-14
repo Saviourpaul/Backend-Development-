@@ -1,1 +1,16 @@
-Mongo_url= "mongodb+srv://saviourpaul24_db_user:t2SUcz8k8Li-Hg7@cluster0.tvy7ewl.mongodb.net/?appName=Cluster0" 
+import mongoose from "mongoose";
+
+
+const connectDB = async () => {
+    try {
+        const conn = await mongoose.connect(process.env.MONGODB_URL);
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
+
+    } catch (error) {
+        console.error(`Error: ${error.message}`);
+        process.exit(1);
+    }
+}
+
+
+export default connectDB
